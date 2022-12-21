@@ -1,0 +1,22 @@
+function firstIndex(arr, testVariable, currentIndex) {
+  // returns the first occurrence of testVariable
+  // Base case1
+  if (arr.length == currentIndex) {
+    return -1;
+  }
+  //above case means the array has been traversed the number/variable has not been found
+
+  // Base case2
+  if (arr[currentIndex] == testVariable) {
+    return currentIndex;
+  }
+
+  // Recursive case
+  return firstIndex(arr, testVariable, currentIndex + 1);
+}
+
+// Driver Code
+let arr = [9, 8, 1, 8, 1, 7];
+let testVariable = 1;
+let currentIndex = 0;
+console.log(firstIndex(arr, testVariable, currentIndex));
